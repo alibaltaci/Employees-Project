@@ -35,6 +35,18 @@
       "department": "Finans",
       "salary": "10000",
       "id": 6
+    },
+    {
+      "name": "ali",
+      "department": "adfadf",
+      "salary": "1000",
+      "id": 7
+    },
+    {
+      "name": "sadASD",
+      "department": "FdsafD",
+      "salary": "1000",
+      "id": 8
     }
   ]
 }

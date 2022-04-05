@@ -46,6 +46,7 @@ eventListeners();
 
 function eventListeners(){
     document.addEventListener("DOMContentLoaded", getAllEmployees);
+    form.addEventListener("submit", addEmployee);
 }
 
 function getAllEmployees(){
@@ -55,4 +56,25 @@ function getAllEmployees(){
         ui.addAllEmployeesToUI(employees);
     })
     .catch(err => console.log(err));
+}
+
+function addEmployee(e){
+
+    const employeeName = nameInput.value.trim();
+    const employeeDepartment = departmentInput.value.trim();
+    const employeeSalary = salaryInput.value.trim();
+
+    if(employeeName === "" || employeeDepartment === "" || employeeSalary === ""){
+        alert("Lütfen tüm alanları doldurun.");
+    }
+    else{
+        req.post({name:employeeName, department:employeeDepartment, salary:Number(employeeSalary)})
+        .then(employee => {
+            ui.addEmployeeToUI(employee);
+        })
+        .catch(err => console.log(err));
+    }
+
+    ui.clearInputs();
+    e.preventDefault();
 }
