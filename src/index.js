@@ -1,5 +1,6 @@
 // import 
 import {Request} from "./request";
+import { UI } from "./ui";
 
 // Elements
 
@@ -7,11 +8,14 @@ const form = document.getElementById("employee-form");
 const nameInput = document.getElementById("name");
 const departmentInput = document.getElementById("department");
 const salaryInput = document.getElementById("salary");
-const employeeList = document.getElementById("employees");
+const employeesList = document.getElementById("employees");
 const updateButton = document.getElementById("update");
 
 // new request object 
 const req = new Request("http://localhost:3000/employees");
+
+// new ui object
+const ui = new UI();
 
 // get request
 
@@ -36,3 +40,19 @@ const req = new Request("http://localhost:3000/employees");
 // req.delete(7)
 // .then(employees => console.log(employees))
 // .catch(err => console.log(err));
+
+
+eventListeners();
+
+function eventListeners(){
+    document.addEventListener("DOMContentLoaded", getAllEmployees);
+}
+
+function getAllEmployees(){
+
+    req.get()
+    .then(employees => {
+        ui.addAllEmployeesToUI(employees);
+    })
+    .catch(err => console.log(err));
+}
