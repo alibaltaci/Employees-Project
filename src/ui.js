@@ -41,4 +41,8 @@ export class UI{
             </tr>
             `; 
     }
+
+    deleteEmployeeFromUI(employee){
+        employee.remove();
+    }
 }
