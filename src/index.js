@@ -33,6 +33,6 @@ const req = new Request("http://localhost:3000/employees");
 
 // delete request 
 
-req.delete(7)
-.then(employees => console.log(employees))
-.catch(err => console.log(err));
+// req.delete(7)
+// .then(employees => console.log(employees))
+// .catch(err => console.log(err));
