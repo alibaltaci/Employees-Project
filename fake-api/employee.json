@@ -1,0 +1,40 @@
+{
+  "employees": [
+    {
+      "name": "Ali Baltacı",
+      "department": "IT",
+      "salary": 10000,
+      "id": 1
+    },
+    {
+      "name": "İbrahim",
+      "department": "CTO",
+      "salary": 18000,
+      "id": 2
+    },
+    {
+      "name": "Deniz",
+      "department": "Doktor",
+      "salary": 15000,
+      "id": 3
+    },
+    {
+      "name": "Hasan",
+      "department": "Pazarlama",
+      "salary": "10000",
+      "id": 4
+    },
+    {
+      "name": "Tuncay",
+      "department": "Pazarlama",
+      "salary": 11000,
+      "id": 5
+    },
+    {
+      "name": "Emirhan",
+      "department": "Finans",
+      "salary": "10000",
+      "id": 6
+    }
+  ]
+}
