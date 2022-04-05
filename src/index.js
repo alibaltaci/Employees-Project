@@ -47,6 +47,7 @@ eventListeners();
 function eventListeners(){
     document.addEventListener("DOMContentLoaded", getAllEmployees);
     form.addEventListener("submit", addEmployee);
+    employeesList.addEventListener("click", updateOrDelete);
 }
 
 function getAllEmployees(){
@@ -77,4 +78,25 @@ function addEmployee(e){
 
     ui.clearInputs();
     e.preventDefault();
+}
+
+function updateOrDelete(e){
+
+    if(e.target.id === "delete-employee"){
+        deleteEmployee(e.target);
+    }
+    else if(e.target.id === "update-employee"){
+
+    }
+}
+
+function deleteEmployee(targetEmployee){
+
+    const id = targetEmployee.parentElement.previousElementSibling.previousElementSibling.textContent;
+
+    req.delete(id)
+    .then(employee => {
+        ui.deleteEmployeeFromUI(targetEmployee.parentElement.parentElement);
+    })
+    .catch(err => console.log(err));
 }
