@@ -1,4 +1,4 @@
-**Ortamın Kurulması**
+# Ortamın Kurulması
 
 1 - node_modules indir.
     cmd --> npm install 
@@ -12,7 +12,7 @@
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 
-**JSON Server Kullanımı**
+# JSON Server Kullanımı
 
 1 - NPM package ile RestApi kurulması. (Local starage yerine rest api kullanacağız.)
 
